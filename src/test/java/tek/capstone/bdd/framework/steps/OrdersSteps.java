@@ -1,6 +1,12 @@
 package tek.capstone.bdd.framework.steps;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.TreeSet;
+
 import org.junit.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 
 import io.cucumber.java.en.And;
@@ -14,13 +20,20 @@ public class OrdersSteps extends CommonUtility {
 	
 	@And("User click on first order in list")
 	public void userClickOnFirstOrderInList() {
-		for(WebElement order: factory.ordersPage().orders) {
-		if(factory.ordersPage().showHideOrderDetails.getText().equals("Show Details")) {
-			click(factory.ordersPage().showHideOrderDetails);
+		TreeSet<String> orderNumbers1 = new TreeSet<String>();
+		for(WebElement element: factory.ordersPage().orderNumbers) {
+			System.out.println(getElementText(element));
+			orderNumbers1.add(getElementText(element).substring(8, 17));
+			
 		}
-		if (isElementDisplayed(factory.ordersPage().arriving)) {
-			break;
-		}
+		for(String order: orderNumbers1) {
+			WebElement ele = getDriver().findElement(By.xpath("//p[text()='" + order + "']//following-sibling::p[@class = 'order__header-btn']"));
+			if(getElementText(ele).equalsIgnoreCase("Show Details")) {
+				click(ele);
+			}
+			if(isElementExist(factory.ordersPage().arriving)) {
+				break;
+			}
 		}
 		logger.info("first order in list is been chosen");
 	}

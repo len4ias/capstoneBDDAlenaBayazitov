@@ -153,6 +153,14 @@ public class CommonUtility extends BaseSetup{
 		}
 	}
 	
+	public static boolean isElementExist(WebElement ele) {
+		try{ele.isDisplayed();
+			return true;
+		}catch(NoSuchElementException e) {
+			return false;
+		}
+	}
+	
 	public static boolean isElementEnabled(WebElement ele) {
 		if(ele.isEnabled()) {
 			return true;

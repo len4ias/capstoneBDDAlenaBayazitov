@@ -47,7 +47,7 @@ Scenario: Verify User can place an order without Shipping address and payment Me
 
 Given User is on retail website
 When User click on Sign in option
-And User enter email 'alldone55@gmail.com' and password 'AllDoneTestOne1!'
+And User enter email 'alldone64@gmail.com' and password 'AllDoneTestOne1!'
 And User click on login button
 And User should be logged in into Account
 And User change the category to 'Smart Home'
@@ -67,7 +67,7 @@ And User click Add Your Address button
 And User click Add a Credit card or Debit Card for Payment method
 And User fill Debit or credit card information 
 |cardNumber|nameOnCard|expirationMonth|expirationYear|securityCode|
-|1111222233334444| Ally Done |6       |2030          |456         |
+|2222555588889999| Ally Done |6       |2030          |456         |
 And User click on Add your card button 
 And User click on Place Your Order
 Then A Message should be displayed 'Order Placed, Thanks'
@@ -77,7 +77,7 @@ Scenario: Verify User can place an order with Shipping address and payment Metho
 
 Given User is on retail website
 When User click on Sign in option
-And User enter email 'alldone55@gmail.com' and password 'AllDoneTestOne1!'
+And User enter email 'alldone64@gmail.com' and password 'AllDoneTestOne1!'
 And User click on login button
 And User should be logged in into Account
 And User change the category to 'Electronics'
@@ -97,7 +97,7 @@ Scenario: Verify User can place an order with Shipping address and payment Metho
 
 Given User is on retail website
 When User click on Sign in option
-And User enter email 'alldone55@gmail.com' and password 'AllDoneTestOne1!'
+And User enter email 'alldone64@gmail.com' and password 'AllDoneTestOne1!'
 And User click on login button
 And User should be logged in into Account
 And User change the category to 'Electronics'

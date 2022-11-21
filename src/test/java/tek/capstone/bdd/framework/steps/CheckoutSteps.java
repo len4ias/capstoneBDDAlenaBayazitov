@@ -1,7 +1,9 @@
 package tek.capstone.bdd.framework.steps;
 
 import org.junit.Assert;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
@@ -22,11 +24,12 @@ public class CheckoutSteps extends CommonUtility {
 	public void userClickAddACreditCardOrDebitCardForPaymentMethod() {
 		clickElementWithJS(waitTillClickable(factory.checkoutPage().addPaymentBtn));
 		logger.info("user clicked add a credit card or debit card for payment method");
+		
 	}
 	
 	@And("User click on Place Your Order")
 	public void userClickOnPlaceYourOrder() {
-		clickElementWithJS(factory.checkoutPage().placeOrderBtn);
+		clickElementWithJS(waitTillClickable(factory.checkoutPage().placeOrderBtn));
 		logger.info("user clicked on place your order button");
 	}
 	

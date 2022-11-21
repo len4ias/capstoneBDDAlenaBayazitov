@@ -16,7 +16,7 @@ public class RetailOrdersPage extends BaseSetup{
 	
 	@FindBy(xpath = "//p[text() = 'Order Placed, Thanks']") public WebElement orderMessage;
 	
-	@FindBy(xpath = "//div[@class = 'order__header-number']") public List<WebElement> orders;
+	@FindBy(xpath = "//div[@class = 'order__header-number']//child::p[@class = 'order__header-title']") public List<WebElement> orderNumbers;
 	
 	@FindBy(xpath = "//div[@class = 'order__status-arriving']") public WebElement arriving;
 	
