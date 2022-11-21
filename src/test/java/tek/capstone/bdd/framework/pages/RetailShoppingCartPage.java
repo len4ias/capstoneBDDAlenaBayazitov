@@ -14,6 +14,7 @@ public class RetailShoppingCartPage extends BaseSetup {
 	
 	@FindBy(id = "proceedBtn") public WebElement proceedToCheckoutButton;
 	
+	@FindBy(xpath = "//span[@class = 'cart__item-delete']") public WebElement deleteItemFromCart;
 	
 	
 	

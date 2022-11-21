@@ -23,23 +23,33 @@ Examples:
 |'Sports'    |Athletic Clothing|Exercise & Fitness|
 |'Automative'|Automative Parts & Accessories|MotorCycle & Powersports|
 
-#@addtocarttest 
-#Scenario: Verify User can add an item to cart 
+@addtocarttest 
+Scenario: Verify User can add an item to cart 
 
-#Given User is on retail website
-#When User click on Sign in option
-#And User enter email 'alldone55@gmail.com' and password 'AllDoneTestOne1!'
-#And User click on login button
-#And User should be logged in into Account
-#And User change the category to 'Smart Home'
-#And User search for an item 'kasa outdoor smart plug'
-#And User click on Search icon
-#And User click on item 
-#And User select quantity '2'
-#And User click add to Cart button 
-#Then The cart icon quantity should change to '2'
+Given User is on retail website
+When User click on Sign in option
+And User enter email 'alldone66@gmail.com' and password 'AllDoneTestOne1!'
+And User click on login button
+And User should be logged in into Account
+And User change the category to 'Smart Home'
+And User search for an item 'kasa outdoor smart plug'
+And User click on Search icon
+And User click on item 
+And User select quantity '2'
+And User click add to Cart button 
+Then The cart icon quantity should change to '2'
 
+@deletefromcarttest 
+Scenario: Verify User can delete an item from cart 
 
+Given User is on retail website
+When User click on Sign in option
+And User enter email 'alldone66@gmail.com' and password 'AllDoneTestOne1!'
+And User click on login button
+And User should be logged in into Account
+And User click on Cart option 
+And User click delete option 
+Then The cart icon quantity should change to '2'
 
 
 @placeanordertest @retailhome 
@@ -47,7 +57,7 @@ Scenario: Verify User can place an order without Shipping address and payment Me
 
 Given User is on retail website
 When User click on Sign in option
-And User enter email 'alldone64@gmail.com' and password 'AllDoneTestOne1!'
+And User enter email 'alldone66@gmail.com' and password 'AllDoneTestOne1!'
 And User click on login button
 And User should be logged in into Account
 And User change the category to 'Smart Home'
@@ -77,7 +87,7 @@ Scenario: Verify User can place an order with Shipping address and payment Metho
 
 Given User is on retail website
 When User click on Sign in option
-And User enter email 'alldone64@gmail.com' and password 'AllDoneTestOne1!'
+And User enter email 'alldone66@gmail.com' and password 'AllDoneTestOne1!'
 And User click on login button
 And User should be logged in into Account
 And User change the category to 'Electronics'
@@ -97,7 +107,7 @@ Scenario: Verify User can place an order with Shipping address and payment Metho
 
 Given User is on retail website
 When User click on Sign in option
-And User enter email 'alldone64@gmail.com' and password 'AllDoneTestOne1!'
+And User enter email 'alldone66@gmail.com' and password 'AllDoneTestOne1!'
 And User click on login button
 And User should be logged in into Account
 And User change the category to 'Electronics'

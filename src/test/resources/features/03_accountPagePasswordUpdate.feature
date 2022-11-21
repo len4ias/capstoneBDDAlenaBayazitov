@@ -4,7 +4,7 @@ Feature: Retail Account Page Password Update
 Scenario: Verify User can Update password 
 Given User is on retail website
 When User click on Sign in option
-And User enter email 'alldone64@gmail.com' and password 'AllDoneTestOne1!'
+And User enter email 'alldone66@gmail.com' and password 'AllDoneTestOne1!'
 And User click on login button
 And User should be logged in into Account
 When User click on Account option 
@@ -18,7 +18,7 @@ Then A message should be displayed 'Password Updated Successfully'
 Scenario: Verify User can Update password 
 Given User is on retail website
 When User click on Sign in option
-And User enter email 'alldone64@gmail.com' and password 'AllDonePass2!'
+And User enter email 'alldone66@gmail.com' and password 'AllDonePass2!'
 And User click on login button
 And User should be logged in into Account
 When User click on Account option 

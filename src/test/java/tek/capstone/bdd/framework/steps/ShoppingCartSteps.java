@@ -14,7 +14,11 @@ public class ShoppingCartSteps extends CommonUtility {
 		logger.info("user clicked on proceed to checkout button");
 	}
 	
-	
+	@And("User click delete option")
+	public void userClickDeleteOption() {
+		click(factory.cartPage().deleteItemFromCart);
+		logger.info("user clicked delete item option");
+	}
 	
 	
 	
