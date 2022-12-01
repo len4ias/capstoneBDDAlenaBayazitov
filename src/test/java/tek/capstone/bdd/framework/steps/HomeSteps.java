@@ -35,13 +35,11 @@ public class HomeSteps extends CommonUtility {
 	@Then("Below options are present in Shop By Department sidebar")
 	public void belowOptionsArePresentInShopByDepartmentSidebar(DataTable options) {
 		List<List<String>> optionsToDisplay = options.asLists(String.class);
-		Assert.assertTrue(isElementDisplayed(getDriver().findElement(By.xpath("//span[text() = '" + optionsToDisplay.get(0).get(0) + "']" ))));
-		//Assert.assertTrue(isElementDisplayed(factory.homePage().electronicsSignature));
-		//Assert.assertTrue(isElementDisplayed(factory.homePage().computersSignature));
-		//Assert.assertTrue(isElementDisplayed(factory.homePage().smartHomeSignature));
-		//Assert.assertTrue(isElementDisplayed(factory.homePage().sportsSignature));
-		//Assert.assertTrue(isElementDisplayed(factory.homePage().automativeSignature));
-		logger.info("options Electronics, Computers, Smart Home, Sports and Automative are present");
+		for(int i=0;i<optionsToDisplay.get(0).size();i++) {
+            System.out.println(getDriver().findElement(By.xpath("//span[text() = '" + optionsToDisplay.get(0).get(i) + "']" )).getText());
+        Assert.assertTrue(isElementDisplayed(getDriver().findElement(By.xpath("//span[text() = '" + optionsToDisplay.get(0).get(i) + "']" ))));
+        }
+		logger.info("options" +  optionsToDisplay.get(0).get(0)+ ", " + optionsToDisplay.get(0).get(1) + ", " + optionsToDisplay.get(0).get(2) + ", " + optionsToDisplay.get(0).get(3)+ ", " + optionsToDisplay.get(0).get(4) + " are present");
 	}
 	
 	@When("User click on Sign in option")

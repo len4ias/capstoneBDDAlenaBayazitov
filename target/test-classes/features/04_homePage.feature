@@ -5,7 +5,7 @@ Scenario: Verify Shop By Department sidebar
 Given User is on retail website
 When User click on All section
 Then Below options are present in Shop By Department sidebar
-|Electronics|Computers|SmartHome|Sports|Automative|
+|Electronics|Computers|Smart Home|Sports|Automative|
 
 @testdepartmentoutline @retailhome 
 Scenario Outline: Verify department sidebar options   
@@ -28,7 +28,7 @@ Scenario: Verify User can add an item to cart
 
 Given User is on retail website
 When User click on Sign in option
-And User enter email 'alldone66@gmail.com' and password 'AllDoneTestOne1!'
+And User enter email 'alldone68@gmail.com' and password 'AllDoneTestOne1!'
 And User click on login button
 And User should be logged in into Account
 And User change the category to 'Smart Home'
@@ -44,7 +44,7 @@ Scenario: Verify User can delete an item from cart
 
 Given User is on retail website
 When User click on Sign in option
-And User enter email 'alldone66@gmail.com' and password 'AllDoneTestOne1!'
+And User enter email 'alldone68@gmail.com' and password 'AllDoneTestOne1!'
 And User click on login button
 And User should be logged in into Account
 And User click on Cart option 
@@ -57,7 +57,7 @@ Scenario: Verify User can place an order without Shipping address and payment Me
 
 Given User is on retail website
 When User click on Sign in option
-And User enter email 'alldone66@gmail.com' and password 'AllDoneTestOne1!'
+And User enter email 'alldone68@gmail.com' and password 'AllDoneTestOne1!'
 And User click on login button
 And User should be logged in into Account
 And User change the category to 'Smart Home'
@@ -87,7 +87,7 @@ Scenario: Verify User can place an order with Shipping address and payment Metho
 
 Given User is on retail website
 When User click on Sign in option
-And User enter email 'alldone66@gmail.com' and password 'AllDoneTestOne1!'
+And User enter email 'alldone68@gmail.com' and password 'AllDoneTestOne1!'
 And User click on login button
 And User should be logged in into Account
 And User change the category to 'Electronics'
@@ -107,7 +107,7 @@ Scenario: Verify User can place an order with Shipping address and payment Metho
 
 Given User is on retail website
 When User click on Sign in option
-And User enter email 'alldone66@gmail.com' and password 'AllDoneTestOne1!'
+And User enter email 'alldone68@gmail.com' and password 'AllDoneTestOne1!'
 And User click on login button
 And User should be logged in into Account
 And User change the category to 'Electronics'
